@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>reception_demo</name>
+  <version>0.0.1</version>
+  <description>reception demo package</description>
+
+  <maintainer email="kochigami@jsk.imi.i.u-tokyo.ac.jp">Kanae Kochigami</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>jsk_nao_startup</build_depend>
+  <build_depend>naoeus</build_depend>
+  <build_export_depend>jsk_nao_startup</build_export_depend>
+  <build_export_depend>naoeus</build_export_depend>
+  <exec_depend>jsk_nao_startup</exec_depend>
+  <exec_depend>naoeus</exec_depend>
+  <exec_depend>naoqi_apps</exec_depend>
+
+</package>

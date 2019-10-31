@@ -1,0 +1,16 @@
+<launch>
+  <arg name="network_interface"   default="enp0s31f6" />
+  <include file="$(find jsk_nao_startup)/launch/jsk_nao_startup.launch" >
+    <arg name="network_interface"   value="$(arg network_interface)" />
+    <arg name="launch_joy" default="false" />
+  </include>
+
+  <!-- using kochigami-develop: https://github.com/kochigami/naoqi_bridge/tree/kochigami-develop -->
+  <include file="$(find naoqi_apps)/launch/speech.launch" />
+  <include file="$(find naoqi_apps)/launch/people_perception_topic.launch" />
+
+  <node name="demo"
+  	pkg="roseus" type="roseus"
+  	args="$(find reception_demo)/euslisp/demo.l &quot;(progn (init) (do-until-key (ros::spin-once)))&quot;" required="true" output="screen" />
+  
+</launch>
