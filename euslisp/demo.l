@@ -30,7 +30,7 @@
   (send *ri* :set-language "Japanese")
 
   ;; set volume as 40
-  (send *ri* :set-master-volume 40)
+  ;;(send *ri* :set-master-volume 40)
   )
 
 (defun people-perception-cb (msg)
